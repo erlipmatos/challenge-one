@@ -1,58 +1,26 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
+let inputArray = [];
 
-function adicionarAmigo()
-{
-    
-   let listaAmigos = [];
+function adicionarAmigo() {
+    const amigo = document.getElementById('amigo');
+    const inputValue = amigo.value;
 
-
-   let amigos = document.querySelector('input').value;
-   
-    if (amigos == numeroSecreto)
-        {
-
-     const listaAmigos = [amigos++]
-        } 
-   
-    listaAmigos.length;
-}
-
-function sortearAmigo() 
-{
-
-    let nomen = prompt('nome da cidade0');
-
-
-    console.log(`seu nome" ${nomen} " `);
-    return limparCampo()
-}
-
-
-function numeroesAmigoEscolhido() {
-    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
-
-    if (quantidadeDeElementosNaLista == numeroLimite) {
-        listaDeNumerosSorteados = [];
+    if (inputValue) {
+        inputArray.push(inputValue);
+        amigo.value = ''; // Clear the input field
+        displayArray();
+        console.log
     }
-    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
-        return gerarNumeroAleatorio();
-    } else {
-        listaDeNumerosSorteados.push(numeroEscolhido);
-        console.log(listaDeNumerosSorteados)
-        return numeroEscolhido;
-    }
+
+}
+/*
+sortearAmigo(){
+
+
 }
 
-function limparCampo() {
-    escolhido = document.querySelector('input');
-    escolhido.value = '';
+/*
+function displayArray() {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = '<h3>Recorded Inputs:</h3><ul>' + inputArray.map(item => `<li>${item}</li>`).join('') + '</ul>';
 }
-
-function reiniciarJogo() {
-    numeroSecreto = gerarNumeroAleatorio();
-    limparCampo();
-    tentativas = 1;
-    exibirMensagemInicial();
-    document.getElementById('reiniciar').setAttribute('disabled', true)
-}
+*/
