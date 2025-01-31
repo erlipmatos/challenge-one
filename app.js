@@ -8,7 +8,7 @@ function adicionarAmigo() {
     if (addAmigos) {
         listaAmigos.push(addAmigos);
         console.log('addamigo');
-        amigo.value = ''; // Clear the input field
+        amigo.value = ''; // limpa entrada de valores
         displayArray();
        
     }
